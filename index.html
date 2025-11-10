@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeeWoo - The Expedition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+      Font Strategy:
+      1. EB Garamond: Old-style serif for headings (fantasy/quest log)
+      2. Lato: Clean sans-serif for body text (readability)
+      3. Roboto Mono: Clean monospace for code (tech)
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Lato:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Subtle texture overlay -->
+    <div class="texture-overlay"></div>
+
+    <header class="site-header">
+        <nav class="container">
+            <div class="logo">WeeWoo_</div>
+            <ul class="nav-links">
+                <li><a href="#docs">The Almanac</a></li>
+                <li><a href="#samples">Code Scrolls</a></li>
+                <li><a href="https://github.com/LazyBeaver007/weewooLang/releases/tag/Compiler">Join the Expedition</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Begin Your Expedition</h1>
+                <p class="subtitle">Discover WeeWoo: A simple, LLVM-powered language
+                    <br>Inspired by the frontiers of Aeternum.</p>
+                <div class="hero-buttons">
+                    <a href="https://github.com/LazyBeaver007/weewooLang/releases/tag/Compiler" class="btn btn-primary">Download the Compiler</a>
+                    <a href="#docs" class="btn btn-secondary">Read the Almanac</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DOCS SECTION ===== -->
+        <section id="docs" class="content-section container">
+            <h2 class="section-title">The Coder's Almanac</h2>
+            <p class="section-intro">The language is built on 6 core keywords. Master them, and you master the craft.</p>
+
+            <h3 class="subsection-title">Core Keywords</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th>
+                            <th>Purpose</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>wee</code></td>
+                            <td>Variable declaration</td>
+                            <td><code>wee x = 5</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>woo</code></td>
+                            <td>Print statement</td>
+                            <td><code>woo x</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>weewoo</code></td>
+                            <td>If statement</td>
+                            <td><code>weewoo (x > 5) { ... }</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>woowee</code></td>
+                            <td>Else clause</td>
+                            <td><code>woowee { ... }</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>woowoo</code></td>
+                            <td>Function definition</td>
+                            <td><code>woowoo main() { ... }</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>weewoowee</code></td>
+                            <td>Return statement</td>
+                            <td><code>weewoowee 42</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="subsection-title">Variables & Expressions</h3>
+            <p>Declare with <code>wee</code>, assign with <code>=</code>. Standard arithmetic is supported.</p>
+            <div class="code-wrapper">
+                <pre class="code-block"><code>
+# Declare a new variable
+wee x = 10
+
+# Re-assign its value
+x = x + 5       # (x is now 15)
+x = x * 2       # (x is now 30)
+
+# Print the final value
+woo x           # Prints 30
+</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+
+            <h3 class="subsection-title">Control Flow</h3>
+            <p>Direct your program's path with <code>weewoo</code> (if) and <code>woowee</code> (else).</p>
+            <div class="code-wrapper">
+                <pre class="code-block"><code>
+wee power_level = 9001
+
+weewoo (power_level > 9000) {
+    woo "It's over 9000!"
+} woowee {
+    woo "Just a regular day."
+}
+</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </section>
+
+        <!-- ===== SAMPLES SECTION ===== -->
+        <section id="samples" class="content-section container">
+            <h2 class="section-title">Code Scrolls</h2>
+            <p class="section-intro">Study these examples to hasten your journey.</p>
+            
+            <h3 class="subsection-title">Complete Program</h3>
+            <p>A full scroll demonstrating variables, functions, and control flow.</p>
+            <div class="code-wrapper">
+                <pre class="code-block"><code>
+# Main function: the entry point of the expedition
+woowoo main() {
+    woo 1000
+    wee x = 10
+    woo x
+    x = x + 20
+    woo x
+
+    weewoo (x > 25) {
+        woo 99
+    } woowee {
+        woo -1
+    }
+    
+    weewoowee 0
+}
+</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+
+            <h3 class="subsection-title">Defining Functions</h3>
+            <p>Craft your own reusable logic. This function adds two numbers.</p>
+            <div class="code-wrapper">
+                <pre class="code-block"><code>
+# Define a function to add two numbers
+woowoo add(a, b) {
+    weewoowee a + b
+}
+
+# The main function
+woowoo main() {
+    wee result = add(33, 44)
+    woo result  # Prints 77
+    weewoowee 0
+}
+</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </section>
+
+        <!-- ===== DOWNLOAD SECTION ===== -->
+        <section id="download" class="content-section container">
+            <h2 class="section-title">Join the Expedition</h2>
+            <p class="section-intro">The compiler is forged and ready. Grab your copy or study the blueprints.</p>
+            
+            <div class="download-cards">
+                <div class="card">
+                    <h3 class="card-title">Download Binary</h3>
+                    <p>Get the latest <code>wwc.exe</code> for Windows. Add it to your PATH and begin your journey.</p>
+                    <a href="https://github.com/LazyBeaver007/weewooLang/releases/tag/Compiler" class="btn btn-primary">
+                        <!-- TODO: Replace '#' with your GitHub Releases link -->
+                        Download from GitHub
+                    </a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">View Source Code</h3>
+                    <p>Examine the C++/LLVM source code. Contributions are welcome.</p>
+                    <a href="https://github.com/LazyBeaver007/weewooLang" class="btn btn-secondary">
+                        <!-- TODO: Replace '#' with your main GitHub repo link -->
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Inspired by Esquirla. Crafted with LLVM.</p>
+            <p>&copy; 2025 Your Name Here. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
