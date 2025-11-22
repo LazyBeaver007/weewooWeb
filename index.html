@@ -23,10 +23,13 @@
     <header class="site-header">
         <nav class="container">
             <div class="logo">WeeWoo_</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#docs">The Almanac</a></li>
                 <li><a href="#samples">Code Scrolls</a></li>
-                <li><a href="https://github.com/LazyBeaver007/weewooLang/releases/tag/Compiler">Join the Expedition</a></li>
+                <li><a href="#download">Join the Expedition</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +38,7 @@
         <!-- ===== HERO SECTION ===== -->
         <section class="hero">
             <div class="hero-content">
-                <h1>Begin Your Expedition</h1>
+                <h1 class="glow-glass">Begin Your Expedition</h1>
                 <p class="subtitle">Discover WeeWoo: A simple, LLVM-powered language
                     <br>Inspired by the frontiers of Aeternum.</p>
                 <div class="hero-buttons">
@@ -43,6 +46,14 @@
                     <a href="#docs" class="btn btn-secondary">Read the Almanac</a>
                 </div>
             </div>
+            <!-- Decorative wave to separate hero from content -->
+            <div class="hero-wave" aria-hidden="true">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,32 C360,120 1080,0 1440,64 L1440,120 L0,120 Z" fill="rgba(0,0,0,0.35)" />
+                </svg>
+            </div>
+            <!-- Fiery ambient overlay (subtle) -->
+            <div class="fire-overlay" aria-hidden="true"></div>
         </section>
 
         <!-- ===== DOCS SECTION ===== -->

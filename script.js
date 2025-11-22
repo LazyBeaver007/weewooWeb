@@ -98,3 +98,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// --- 4. MOBILE NAV TOGGLE ---
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('nav-open');
+        });
+
+        // Close mobile nav when a link is clicked
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                if (navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    document.body.classList.remove('nav-open');
+                }
+            });
+        });
+    }
+});
